@@ -1,0 +1,37 @@
+User：
+p1_data = []
+
+for row in match_data_list:
+    if row[point_no] < window_size:
+        continue
+    a = calculate_p1(row[point_no])
+    #print(a)
+    p1_data.append(a)
+    if row[point_no] <= 10:
+        print(p1_data)
+    #print(p1_data[int(row[point_no])-window_size])
+
+The calculate_p1 function returns a list
+After the above code is executed, after each append (a), the data in p1_data will be overwritten with all the data in a
+For example, if there is only one list in p1_data, and the first value is 6, then after append (a) to the second list (which has a first value of 7), there will be two lists in p1_data, but all of them will become lists with a first value of 7.
+
+ChatGPT
+It seems like there might be an issue with the calculate_p1 function, which is overwriting the same list instance for each iteration. If the function is intended to return a new list for each call, you should make sure it creates a new list rather than modifying an existing one.
+Here's an example of how the calculate_p1 function might be causing the issue:
+
+python Copy code
+def calculate_p1(value):
+    # Incorrect implementation that modifies the same list
+    result_list = []
+    result_list.append(value)
+    return result_list
+In this case, each time calculate_p1 is called, it appends the value to the same list instance, leading to the issue you described.
+
+To fix this, make sure that calculate_p1 creates a new list and returns it. For example:
+
+python Copy code
+def calculate_p1(value):
+    # Correct implementation that creates a new list
+    result_list = [value]
+    return result_list
+Ensure that the calculate_p1 function is designed to return a fresh list for each call. If the issue persists, you might need to provide the implementation of the calculate_p1 function for further assistance.
