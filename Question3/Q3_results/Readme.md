@@ -4,6 +4,12 @@
 
 权重文件：16_x.txt
 
+选手特征文件：Carlos Alcaraz_solved_data.csv
+
+
+
+Carlos Alcaraz_five_matches.txt文件是用他和对手五场比赛的数据得到的特征权重之类和评价指标
+
 
 
 #### 3个特征（选的上面权重最高的三个）
@@ -45,6 +51,10 @@ png文件中有不同阈值对应的准确度（也算是灵敏度分析吧？�
 Q3_for_test文件可以直接在jupyter中运行
 
 需要安装scikit-learn库和joblib库
+
+
+
+
 
 
 
