@@ -4,7 +4,7 @@
 
 权重文件：16_x.txt
 
-选手特征文件：Carlos Alcaraz_solved_data.csv
+选手特征文件：Carlos Alcaraz_data_solved.csv（五场比赛）
 
 
 
@@ -51,6 +51,14 @@ png文件中有不同阈值对应的准确度（也算是灵敏度分析吧？�
 Q3_for_test文件可以直接在jupyter中运行
 
 需要安装scikit-learn库和joblib库
+
+
+
+#### AI使用
+
+AI.txt
+
+AI.py
 
 
 
